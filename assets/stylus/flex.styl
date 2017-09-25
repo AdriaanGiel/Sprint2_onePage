@@ -1,0 +1,33 @@
+.flex
+  display flex
+
+.flex-center
+  align-items center
+  justify-content center
+
+.flex-column
+  flex-direction column
+
+.flex-row
+  flex-direction row
+
+.flex-wrap
+  flex-wrap wrap
+  justify-content space-between
+
+.flex-around
+  flex-wrap wrap
+  justify-content space-around
+
+.flex-right
+  flex-direction row;
+
+.flex-left
+  flex-direction row-reverse;
+
+@media screen and (max-width: 767px)
+  .flex-right
+    flex-direction column
+
+  .flex-left
+    flex-direction column-reverse
