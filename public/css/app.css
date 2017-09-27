@@ -7,10 +7,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
-.footer {
-  height: 60vh;
-  background-color: #a9a9a9;
-}
 a:visited {
   color: #fff;
 }
@@ -23,7 +19,7 @@ img {
   z-index: 1000;
   background: url("../img/foosball-min.jpg") no-repeat center center fixed;
 }
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 767px) {
   .main-picture {
     background: url("../img/foosball-min.jpg") no-repeat center center;
   }
@@ -34,7 +30,7 @@ img {
   font-size: 5em;
   color: #fff;
 }
-@media screen and (max-width: 717px) {
+@media screen and (max-width: 767px) {
   .main-center-text {
     font-size: 2em;
   }
@@ -178,10 +174,20 @@ img {
   width: 1000px;
   margin: auto;
 }
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
 .columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 .column {
   -webkit-box-flex: 1;
@@ -358,6 +364,20 @@ img {
   height: 40vh;
   background-color: #fff;
   border-top: #808080;
+}
+@media screen and (max-width: 767px) {
+  .sell-icons {
+    height: 65vh;
+  }
+}
+.footer {
+  height: 60vh;
+  background-color: #a9a9a9;
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 35vh;
+  }
 }
 .slide-fade-enter-active {
   -webkit-transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);

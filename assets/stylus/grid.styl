@@ -23,9 +23,13 @@ for sm in (1..6)
 .container
   width 1000px
   margin auto
+  @media screen and (max-width 767px)
+    width 100%
 
 .columns
   display flex
+  flex-wrap wrap
+  flex none
 
 .column
   flex 1
