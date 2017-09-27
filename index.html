@@ -5,8 +5,9 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="public/css/app.css">-->
-    <link rel="stylesheet" href="{{ site.github.url }}/public/css/app.css">
+    <link rel="stylesheet" href="public/css/app.css">
+
+    <base href="{{ site.github.url }}">
 
 </head>
 <body>
@@ -51,7 +52,7 @@
     </section>
 
     <section class="section" section-name="first">
-        <one-section section-id="1" custom-class="primary" image="{{ site.github.url }}/public/img/kroeg.jpeg" :section-direction="false">
+        <one-section section-id="1" custom-class="primary" image="public/img/kroeg.jpeg" :section-direction="false">
             <!--<img slot="sectionicon"  src="public/img/KonradZuse.jpg" alt="TestImage">-->
             <div slot="sectioncontent" class="inner-content">
                 <h2>TEST</h2>
@@ -68,7 +69,7 @@
     </section>
 
     <section class="section" section-name="second">
-        <one-section section-id="2" custom-class="secondary" image="{{ site.github.url }}/public/img/foosball2.jpg" :section-direction="true">
+        <one-section section-id="2" custom-class="secondary" image="public/img/foosball2.jpg" :section-direction="true">
             <!--<img slot="sectionicon"  src="public/img/KonradZuse.jpg" alt="TestImage">-->
             <div slot="sectioncontent" class="inner-content">
                 <h2>TEST</h2>
@@ -131,10 +132,8 @@
 
 
 </div>
-    <!--<script src="public/js/manifest.js"></script>-->
-    <script src="{{ site.github.url }}/public/js/manifest.js"></script>
-    <!--<script src="public/js/vendors.js"></script>-->
-    <script src="{{ site.github.url }}/public/js/vendors.js"></script>
+    <script src="public/js/manifest.js"></script>
+    <script src="public/js/vendors.js"></script>
     <script>
         $(function () {
             $.scrollify({
@@ -142,8 +141,7 @@
             });
         });
     </script>
-    <!--<script src="public/js/app.js"></script>-->
-    <script src="{{ site.github.url }}/public/js/app.js"></script>
+    <script src="public/js/app.js"></script>
 
 </body>
 </html>
