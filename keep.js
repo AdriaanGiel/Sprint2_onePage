@@ -12,28 +12,11 @@ let mix = require('laravel-mix');
 
  */
 
-mix.webpackConfig({
-    resolve: {
-        alias: {
-            jquery: "jquery/src/jquery"
-        }
-    }
-});
-
-mix.options({
-    processCssUrls: false,
-    publicPath: 'public'
-});
-
-mix.autoload({
-    jquery: ['$', 'window.jQuery']
-});
-
-
 mix.js('assets/js/app.js', 'public/js');
 mix.stylus('assets/stylus/app.styl', 'public/css');
 mix.copyDirectory('assets/img', 'public/img');
 
-mix.extract(['jquery','jquery-scrollify'],'public/js/vendors.js');
-
+mix.options({
+    processCssUrls: false
+});
 

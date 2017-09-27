@@ -2,33 +2,27 @@ window.Vue = require('vue');
 
 
 import oneSection from './components/one-section.vue';
-import secSection from './components/sec-section.vue';
+
 new Vue({
     el:"#one-app",
-    components:{oneSection,secSection},
+    components:{oneSection},
     data:{
-        scrollPosition: 0
+        mobileNav: false,
+        frontLoader: true
     },
     mounted(){
 
     },
     methods:{
-        checkScrollDirection: function (newPosition) {
-            return newPosition > this.scrollPosition;
+        onClickNav(){
+            this.mobileNav = !this.mobileNav;
         },
-        handleScroll: function (e) {
-            e.preventDefault();
-            let test = this.checkScrollDirection(window.scrollY);
-
-            this.scrollPosition = window.scrollY;
-            console.log(test);
-
+        removeLoader(){
+            this.frontLoader = false;
         }
     },
-    created: function () {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    destroyed: function () {
-        window.removeEventListener('scroll', this.handleScroll);
+    created(){
+        setTimeout(this.removeLoader,500);
+
     }
 });

@@ -1,7 +1,7 @@
 <template>
     <div :id="getSectionId" :class="getCustomClass">
         <div class="container" :class="getDirection">
-            <div class="icon flex flex-center" style="background: url('public/img/KonradZuse.jpg') no-repeat center center; background-size: cover;">
+            <div class="icon flex flex-center" :style="getBackgroundImage">
                 <slot name="sectionicon"></slot>
             </div>
 
@@ -14,8 +14,11 @@
 
 <script>
     export default {
-        props:['sectionId','customClass','sectionDirection'],
+        props:['sectionId','customClass','sectionDirection','image'],
         computed:{
+            getBackgroundImage(){
+              return "background: url('" + this.image + "'); no-repeat center center; background-size: cover;";
+            },
             getSectionId(){
                 return "section" + this.sectionId;
             },

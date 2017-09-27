@@ -1,0 +1,37 @@
+
+$medium = 8.3333333333333
+for med in (1..12)
+  .col-{med}
+    width (med * $medium)%
+    display inline-block
+    @media screen and (max-width: 767px)
+      width (med * ($medium * 2))%
+
+
+
+$small = 16.6666666666666
+for sm in (1..6)
+  .col-sm-{sm}
+    width (sm * $small)%
+    display inline-block
+// CALCULATIONS
+
+
+.fluid
+  min-width 100%
+
+.container
+  min-width 1000px
+  margin auto
+
+.columns
+  display flex
+
+//.column
+
+
+
+.box
+  padding 2em
+
+
