@@ -8,7 +8,8 @@ new Vue({
     components:{oneSection},
     data:{
         mobileNav: false,
-        frontLoader: true
+        frontLoader: true,
+        currentSection: ""
     },
     mounted(){
 
@@ -19,10 +20,23 @@ new Vue({
         },
         removeLoader(){
             this.frontLoader = false;
+        },
+        handleScroll(){
+            this.currentSection = $.scrollify.current().attr('section-name') || "";
+
+        },
+        getSection(name){
+            if(this.currentSection.length){
+                return this.currentSection.toString() == name.toString();
+            }
+            return false;
         }
     },
     created(){
+        window.addEventListener('scroll', this.handleScroll);
         setTimeout(this.removeLoader,500);
-
-    }
+    },
+    destroyed: function () {
+    window.removeEventListener('scroll', this.handleScroll);
+}
 });

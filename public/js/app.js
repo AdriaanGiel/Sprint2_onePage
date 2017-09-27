@@ -1,50 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 62:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(63);
-module.exports = __webpack_require__(70);
-
-
-/***/ }),
-
-/***/ 63:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_one_section_vue__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_one_section_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_one_section_vue__);
-window.Vue = __webpack_require__(64);
-
-
-
-new Vue({
-    el: "#one-app",
-    components: { oneSection: __WEBPACK_IMPORTED_MODULE_0__components_one_section_vue___default.a },
-    data: {
-        mobileNav: false,
-        frontLoader: true
-    },
-    mounted: function mounted() {},
-
-    methods: {
-        onClickNav: function onClickNav() {
-            this.mobileNav = !this.mobileNav;
-        },
-        removeLoader: function removeLoader() {
-            this.frontLoader = false;
-        }
-    },
-    created: function created() {
-        setTimeout(this.removeLoader, 500);
-    }
-});
-
-/***/ }),
-
-/***/ 64:
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10241,11 +10197,11 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(65)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(104)))
 
 /***/ }),
 
-/***/ 65:
+/***/ 104:
 /***/ (function(module, exports) {
 
 var g;
@@ -10273,15 +10229,15 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 66:
+/***/ 105:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(67)
+var normalizeComponent = __webpack_require__(106)
 /* script */
-var __vue_script__ = __webpack_require__(68)
+var __vue_script__ = __webpack_require__(107)
 /* template */
-var __vue_template__ = __webpack_require__(69)
+var __vue_template__ = __webpack_require__(108)
 /* styles */
 var __vue_styles__ = null
 /* scopeId */
@@ -10320,7 +10276,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 67:
+/***/ 106:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -10418,7 +10374,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 68:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10461,7 +10417,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 69:
+/***/ 108:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -10505,10 +10461,70 @@ if (false) {
 
 /***/ }),
 
-/***/ 70:
+/***/ 109:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 62:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(63);
+module.exports = __webpack_require__(109);
+
+
+/***/ }),
+
+/***/ 63:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_one_section_vue__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_one_section_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_one_section_vue__);
+window.Vue = __webpack_require__(103);
+
+
+
+new Vue({
+    el: "#one-app",
+    components: { oneSection: __WEBPACK_IMPORTED_MODULE_0__components_one_section_vue___default.a },
+    data: {
+        mobileNav: false,
+        frontLoader: true,
+        currentSection: ""
+    },
+    mounted: function mounted() {},
+
+    methods: {
+        onClickNav: function onClickNav() {
+            this.mobileNav = !this.mobileNav;
+        },
+        removeLoader: function removeLoader() {
+            this.frontLoader = false;
+        },
+        handleScroll: function handleScroll() {
+            this.currentSection = $.scrollify.current().attr('section-name') || "";
+        },
+        getSection: function getSection(name) {
+            if (this.currentSection.length) {
+                return this.currentSection.toString() == name.toString();
+            }
+            return false;
+        }
+    },
+    created: function created() {
+        window.addEventListener('scroll', this.handleScroll);
+        setTimeout(this.removeLoader, 500);
+    },
+
+    destroyed: function destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+});
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(15)))
 
 /***/ })
 

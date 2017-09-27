@@ -8,7 +8,7 @@ body {
   font-size: 15px;
 }
 .footer {
-  height: 30vh;
+  height: 60vh;
   background-color: #a9a9a9;
 }
 a:visited {
@@ -25,7 +25,7 @@ img {
 }
 @media screen and (max-width: 717px) {
   .main-picture {
-    height: 100vh;
+    background: url("../img/foosball-min.jpg") no-repeat center center;
   }
 }
 .main-center-text {
@@ -175,13 +175,18 @@ img {
   min-width: 100%;
 }
 .container {
-  min-width: 1000px;
+  width: 1000px;
   margin: auto;
 }
 .columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .box {
   padding: 2em;
@@ -350,20 +355,19 @@ img {
   width: 60%;
 }
 .sell-icons {
+  height: 40vh;
   background-color: #fff;
   border-top: #808080;
 }
-.voorbeeld {
-  background-color: #00f;
-  width: 100%;
+.slide-fade-enter-active {
+  -webkit-transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.voorbeeld > p {
-  font-size: 20px;
+.slide-fade-leave-active {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.voorbeeld {
-  background-color: #00f;
-  width: 100%;
-}
-.voorbeeld p {
-  font-size: 20px;
+.slide-fade-enter,
+.slide-fade-leave-to {
+  opacity: 0;
 }
