@@ -32,8 +32,11 @@ mix.autoload({
 
 mix.js('assets/js/app.js', 'public/js');
 mix.stylus('assets/stylus/app.styl', 'public/css');
+
+mix.copy('node_modules/lightgallery.js/dist/css/lightgallery.css', 'public/css/lightgallery.css');
+
 mix.copyDirectory('assets/img', 'public/img');
 
-mix.extract(['jquery','jquery-scrollify'],'public/js/vendors.js');
+mix.extract(['jquery','jquery-scrollify','lightgallery.js'],'public/js/vendors.js');
 
 

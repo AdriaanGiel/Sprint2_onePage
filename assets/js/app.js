@@ -30,6 +30,10 @@ new Vue({
                 return this.currentSection.toString() == name.toString();
             }
             return false;
+        },
+        goToSection(index){
+
+            $.scrollify.move(index);
         }
     },
     created(){

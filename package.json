@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "jquery-scrollify": "^1.0.17",
-    "laravel-mix": "^1.4.5"
+    "laravel-mix": "^1.4.5",
+    "lightgallery.js": "^1.0.1"
   }
 }

@@ -6,9 +6,27 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/lightgallery.css">
 
     <base href="{{ site.github.url }}">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="public/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="public/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="public/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="public/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <div id="one-app" class="fluid">
@@ -24,41 +42,80 @@
 
     <section class="section" section-name="top">
         <header>
-            <nav id="main-nav">
-                <ul class="desktop-nav flex flex-around flex-column-sm">
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">About</a></li>
-                    <li class="nav-item"><a href="#">Form</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
-                </ul>
+            <!--<nav id="main-nav">-->
+                <!--<ul class="desktop-nav flex flex-around flex-column-sm">-->
+                    <!--<li class="nav-item"><a href="#">Home</a></li>-->
+                    <!--<li class="nav-item"><a href="#">About</a></li>-->
+                    <!--<li class="nav-item"><a href="#">Form</a></li>-->
+                    <!--<li class="nav-item"><a href="#">Contact</a></li>-->
+                <!--</ul>-->
 
-                <ul class="mobile-nav flex flex-around flex-column-sm">
-                    <li class="nav-item hamburger" v-on:click="onClickNav"><a ><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                <!--<ul class="mobile-nav flex flex-around flex-column-sm">-->
+                    <!--<li class="nav-item hamburger" v-on:click="onClickNav"><a ><i class="fa fa-bars" aria-hidden="true"></i></a></li>-->
 
-                    <li v-show="mobileNav" class="nav-item"><a href="#">Home</a></li>
-                    <li v-show="mobileNav" class="nav-item"><a href="#">About</a></li>
-                    <li v-show="mobileNav" class="nav-item"><a href="#">Form</a></li>
-                    <li v-show="mobileNav" class="nav-item"><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+                    <!--<li v-show="mobileNav" class="nav-item"><a href="#">Home</a></li>-->
+                    <!--<li v-show="mobileNav" class="nav-item"><a href="#">About</a></li>-->
+                    <!--<li v-show="mobileNav" class="nav-item"><a href="#">Form</a></li>-->
+                    <!--<li v-show="mobileNav" class="nav-item"><a href="#">Contact</a></li>-->
+                <!--</ul>-->
+            <!--</nav>-->
 
 
         </header>
         <div class="main-picture flex flex-center" style="">
-            <div class="flex flex-center main-center-text">
+            <div class="flex flex-center main-center-text flex-column">
                 <h1>
                     Digitale Foosball
                 </h1>
+
+                <button class="button" v-on:click="goToSection(1)">Begin</button>
             </div>
+        </div>
+    </section>
+
+    <section class="section" section-name="call">
+        <div class="container full-height">
+
+            <div class="flex flex-center full-height flex-column">
+                <div class="head flex flex-center">
+                    <h2 class="main-title">Voordelen</h2>
+                </div>
+                <div class="columns wrap call-box flex flex-center col-sm-6">
+                    <div class="call flex flex-center flex-around flex-column">
+                        <span class="round"
+                              style="background: url('public/img/money.jpeg') no-repeat center center; background-size: cover;"></span>
+                        <button class="button"  v-on:click="goToSection(2)">
+                            Goedkoop
+                        </button>
+                    </div>
+                    <div class="column call flex flex-center flex-around flex-column col-sm-6">
+                        <span class="round"
+                              style="background: url('public/img/plug-icon.png') no-repeat center center; background-size: cover;"></span>
+                        <button class="button"  v-on:click="goToSection(3)">
+                            Plug & play
+                        </button>
+                    </div>
+                    <div class="column call flex flex-center flex-around flex-column col-sm-6">
+                        <span class="round"
+                              style="background: url('public/img/beer-drink.jpg') no-repeat center center; background-size: cover;"></span>
+                        <button class="button"  v-on:click="goToSection(4)">
+                            Drinken
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section class="section" section-name="first">
         <transition name="slide-fade">
-            <one-section v-show="getSection('first')"  section-id="1" custom-class="primary" image="public/img/kroeg.jpeg" :section-direction="false">
-                <!--<img slot="sectionicon"  src="public/img/KonradZuse.jpg" alt="TestImage">-->
+            <one-section v-show="getSection('first')"  section-id="1" custom-class="primary" image="public/img/office.jpeg" :section-direction="false">
+                <img slot="sectionicon" class="extra-image"  src="public/img/fastgood.png" alt="TestImage" height="300" width="300">
                 <div slot="sectioncontent" class="inner-content">
-                    <h2>TEST</h2>
+                    <h2>Goedkoop</h2>
                     <p>
                         Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
                         proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
@@ -74,7 +131,7 @@
             <one-section v-show="getSection('second')" section-id="2" custom-class="secondary" image="public/img/foosball2.jpg" :section-direction="true">
             <!--<img slot="sectionicon"  src="public/img/KonradZuse.jpg" alt="TestImage">-->
             <div slot="sectioncontent" class="inner-content">
-                <h2>TEST</h2>
+                <h2>Plug & play</h2>
                 <p>
                     Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
                     proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
@@ -85,43 +142,68 @@
         </transition>
     </section>
 
+    <section class="section" section-name="third">
+        <transition name="slide-fade">
+            <one-section v-show="getSection('third')" section-id="3" custom-class="primary" image="public/img/kroeg.jpeg" :section-direction="false">
+                <!--<img slot="sectionicon"  src="public/img/KonradZuse.jpg" alt="TestImage">-->
+                <div slot="sectioncontent" class="inner-content">
+                    <h2>Drankje doen</h2>
+                    <p>
+                        Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
+                        proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
+                        en ze door elkaar husselde om een font-catalogus te maken.
+                    </p>
+                </div>
+            </one-section>
+        </transition>
+    </section>
+
     <section class="section" section-name="last">
         <div class="container">
-            <div class="sell-icons columns">
+            <div class="image-gallery">
+                <div class="col-12 flex flex-center">
+                    <h2 class="main-title">Foto's</h2>
+                </div>
+                <div class="columns flex flex-center flex-wrap  small-flex-column">
 
-                <div class="column flex flex-center">
-                    <div class="box flex flex-center flex-column">
-                        <i class="fa fa-play-circle fa-5x fa-fw" aria-hidden="true"></i>
-                        <h1>Test</h1>
+                    <div class="column full-height col-4  flex flex-center padding-1 first-element">
+                        <a href="public/img/players.jpg" target="_blank">
+                            <div class="gallery-img" style="background: url('public/img/players.jpg') no-repeat center center; background-size: cover;">
+
+                            </div>
+                        </a>
+
                     </div>
-                </div>
-                <div class="column flex flex-center">
-                    <div class="box flex flex-center flex-column">
-                        <i class="fa fa-microchip fa-5x fa-fw" aria-hidden="true"></i>
-                        <h1>Test</h1>
+
+                    <div class="column full-height col-4  flex flex-center padding-1">
+                        <a href="public/img/circuit.jpg" target="_blank">
+                            <div class="gallery-img " style="background: url('public/img/circuit.jpg') no-repeat center center; background-size: cover;">
+
+                            </div>
+                        </a>
+
                     </div>
-                </div>
-                <div class="column flex flex-center">
-                    <div class="box flex flex-center flex-column">
-                        <i class="fa fa-thumbs-up fa-5x fa-fw" aria-hidden="true"></i>
-                        <h1>Test</h1>
-                    </div>
-                </div>
-                <div class="column flex flex-center">
-                    <div class="box flex flex-center flex-column">
-                        <i class="fa fa-beer fa-5x fa-fw" aria-hidden="true"></i>
-                        <h1>Test</h1>
+
+                    <div class="column full-height col-4 flex flex-center padding-1">
+                        <a href="public/img/foosetable.jpg" target="_blank">
+                            <div class="gallery-img " style="background: url('public/img/foosetable.jpg') no-repeat center center; background-size: cover;">
+
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
+
         </div>
 
 
         <footer>
             <div class="footer">
-                <div class="container">
-
-
+                <div class="container full-height">
+                    <div class="flex flex-center full-height" style="color: white">
+                        <p>Gemaakt door Groep 4</p>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -135,6 +217,12 @@
 </div>
     <script src="public/js/manifest.js"></script>
     <script src="public/js/vendors.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            lightGallery(document.getElementById('lightgallery'));
+        });
+
+    </script>
     <script>
         $(function () {
             $.scrollify({

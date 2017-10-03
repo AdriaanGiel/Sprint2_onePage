@@ -2,17 +2,16 @@
 $medium = 8.3333333333333
 for med in (1..12)
   .col-{med}
-    width (med * $medium)%
+    width round((med * $medium)%,5)
     display inline-block
-    @media screen and (max-width: 767px)
-      width (med * ($medium * 2))%
 
 
 
 $small = 16.6666666666666
 for sm in (1..6)
+  //@media screen and (max-width: 767px)
   .col-sm-{sm}
-    width (sm * $small)%
+    width round((sm * $small)%,5)
     display inline-block
 // CALCULATIONS
 
@@ -26,15 +25,28 @@ for sm in (1..6)
   @media screen and (max-width 767px)
     width 100%
 
+.full-height
+  height 100%
+
+
+.padding-1
+  padding 1em
+
+.padding-1.first-element
+  padding 1em 1em 1em 0
+  @media screen and (max-width 767px)
+    padding 1em
+
 .columns
   display flex
+
+
+.columns.wrap
   flex-wrap wrap
   flex none
 
 .column
   flex 1
-
-
 
 .box
   padding 2em

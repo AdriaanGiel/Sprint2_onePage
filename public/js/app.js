@@ -10513,6 +10513,10 @@ new Vue({
                 return this.currentSection.toString() == name.toString();
             }
             return false;
+        },
+        goToSection: function goToSection(index) {
+
+            $.scrollify.move(index);
         }
     },
     created: function created() {
