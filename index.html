@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="public/css/app.css">
     <link rel="stylesheet" href="public/css/lightgallery.css">
 
-    <base href="{{ site.github.url }}">
+    <!--<base href="{{ site.github.url }}">-->
 
     <link rel="apple-touch-icon" sizes="57x57" href="public/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="public/img/favicon/apple-icon-60x60.png">
@@ -73,6 +73,25 @@
         </div>
     </section>
 
+    <section class="section" section-name="about">
+        <div class="container full-height">
+            <div class="flex flex-center full-height">
+                <div class="flex flex-column">
+                    <h2 class="main-title">
+                        De form van entertainment waar u naar zocht!
+                    </h2>
+                    <p>
+
+                        Dit is hét nieuwe device dat op dit moment word ontwikkeld door ‘projectgroep4’ in Rotterdam op de Hogeschool Rotterdam. Met de nieuwe technologie en de nieuwste high tech spullen
+                        van 2018 in de horizon, het wordt tijd om eens wat zuiniger om te gaan met onze centen.
+
+                        In plaats van het aanschaffen van een 200 euro dure tafelvoetbal is er hier de Digitale Tafelvoetbal voor maar 29,95 euro. Extra speelballen en batterijen apart verkrijgbaar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section" section-name="call">
         <div class="container full-height">
 
@@ -84,21 +103,21 @@
                     <div class="call flex flex-center flex-around flex-column">
                         <span class="round"
                               style="background: url('public/img/money.jpeg') no-repeat center center; background-size: cover;"></span>
-                        <button class="button"  v-on:click="goToSection(2)">
+                        <button class="button"  v-on:click="goToSection(3)">
                             Goedkoop
                         </button>
                     </div>
                     <div class="column call flex flex-center flex-around flex-column col-sm-6">
                         <span class="round"
                               style="background: url('public/img/plug-icon.png') no-repeat center center; background-size: cover;"></span>
-                        <button class="button"  v-on:click="goToSection(3)">
+                        <button class="button"  v-on:click="goToSection(4)">
                             Plug & play
                         </button>
                     </div>
                     <div class="column call flex flex-center flex-around flex-column col-sm-6">
                         <span class="round"
                               style="background: url('public/img/beer-drink.jpg') no-repeat center center; background-size: cover;"></span>
-                        <button class="button"  v-on:click="goToSection(4)">
+                        <button class="button"  v-on:click="goToSection(5)">
                             Drinken
                         </button>
                     </div>
@@ -117,9 +136,17 @@
                 <div slot="sectioncontent" class="inner-content">
                     <h2>Goedkoop</h2>
                     <p>
-                        Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
-                        proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
-                        en ze door elkaar husselde om een font-catalogus te maken.
+                        Met de nieuwe technologie en de nieuwste high tech spullen
+                        van 2018 in de horizon, het wordt tijd om eens wat zuiniger
+                        om te gaan met onze centen.
+
+                        De digitale tafelvoetbal van Adriaan&Co, bestuurd door een
+                        computerplatform dat is de Arduino, is 7,65% profijtiger dan
+                        de Raspberry Pi en maar liefst 12% dan de Radxa Rock.
+
+                        In plaats van het aanschaffen van een 200 euro dure
+                        tafelvoetbal is er hier de Digitale Tafelvoetbal voor maar
+                        29,95 euro. Extra speelballen en batterijen apart verkrijgbaar.
                     </p>
                 </div>
             </one-section>
@@ -133,9 +160,15 @@
             <div slot="sectioncontent" class="inner-content">
                 <h2>Plug & play</h2>
                 <p>
-                    Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
-                    proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
-                    en ze door elkaar husselde om een font-catalogus te maken.
+                    De capaciteiten van de Digitale Tafelvoetbal zijn overweldigend.
+                    Powered by een Arduino UNO, deze setting van de tafel voetbal
+                    wordt versprijd om de tafel heen met jump wires die niet door
+                    de blote oog gezien kunnen worden.
+
+                    De kracht om de doelpunten automatisch te tellen wordt voortgebrcht
+                    door meerdere ldr sensoren ( light dependent resistor ). Deze
+                    zullen zonder enige input de punten voor de speleres optellen en
+                    weergeven op een lcd display voor de gezichtspunten van de spelers.
                 </p>
             </div>
         </one-section>
@@ -149,9 +182,13 @@
                 <div slot="sectioncontent" class="inner-content">
                     <h2>Drankje doen</h2>
                     <p>
-                        Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
-                        proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam
-                        en ze door elkaar husselde om een font-catalogus te maken.
+                        Niets is beter dan een glaasje koud bier op een vrijdag avond
+                        na een zware werkdag. En tuurlijk is de bier wel een lekker stukje
+                        afleiding en ontspanning, maar niet voor lang. Een paar negatieve
+                        gedachten en een paar shots later en je hebt het al gehad!
+                        De Digitale Voetbaltafel is de oplossing voor je humeur als een pessimist.
+                        De automatische scoren teller van de Digitale Voetbaltafel zorgt er
+                        namelijk voor dat je je geen zorgen hoeft te maken over de stand!
                     </p>
                 </div>
             </one-section>
